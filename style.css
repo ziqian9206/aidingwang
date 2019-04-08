@@ -40,6 +40,7 @@
 /*  1.  Theme default CSS
 /*----------------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800');
+@import './fonts/qqicon/iconfont.css';
 html, body {height: 100%;}
 .floatleft {float:left}
 .floatright {float:right}
@@ -99,10 +100,7 @@ body {
 }
 .bg-color{background:#F5F5F5}
 .pad-60 {
-	padding: 90px 0;
-}
-.pad-b-60 {
-  padding-bottom: 60px;
+	padding: 90px 0 0;
 }
 .stick {
   left: 0;
@@ -116,6 +114,7 @@ body {
 }
 .stick .main-menu ul li ul li a {
   padding: 10px 15px;
+  
 }
 .stick .logo {
   padding: 13px 0;
@@ -227,13 +226,27 @@ body {
 background: #fff none repeat scroll 0 0;
 transition: all 0.3s ease-in-out 0s;
 z-index: 1000;
+
 }
 .logo {
-  padding: 19px 0;
+  /* padding: 19px 0;
   transition: all 0.3s ease 0s;
-  margin-top: 2px;
+  margin-top: 2px; */
+  width: 165px;
+  line-height: 60px;
+  padding: 14px 0;
 }
-.logo a{}
+.logo a{
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  overflow: hidden;
+  display: block;
+  height:100%;
+  background-size:100%;
+  width:100%;
+  background-image: url("img/aiindex/logo.png");
+  font-size: 0;
+}
 .logo a img{}
 .main-menu {
 }
@@ -247,7 +260,7 @@ z-index: 1000;
 }
 .main-menu ul li a {
 	display: block;
-	font-size: 14px;
+	font-size: 20px;
 	padding: 35px 0;
 	text-transform: uppercase;
 	font-weight: 500;
@@ -576,14 +589,14 @@ float: right;
 	min-height: 600px;
 	background-size: cover;
 }
-.slide-content h1 {
+.slide-content h2 {
 	font-size: 70px;
 	line-height: 1.1;
 	font-weight: 700;
 	margin-bottom: 20px;
 	color: #292929;
 }
-.slide-content h1 span {
+.slide-content h2 span {
 	color: #7DBA2F;
 }
 .slide-content p {
@@ -657,7 +670,7 @@ float: right;
 	display: flex !important;
 }
 /* slider-white */
-.slide-content.slide-white h1 {
+.slide-content.slide-white h2 {
 	color: #fff;
 }
 .slide-content.slide-white p {
@@ -686,7 +699,8 @@ float: right;
 }
 .btn.btn-white {
 	border-color: #fff;
-	color: #fff;
+  color: #fff;
+  font-size: 16px;
 }
 .btn.btn-white:hover {
 	background: #fff;
@@ -904,8 +918,9 @@ margin: 8px auto;}
   width: 100%;
   z-index: 2;
 }
+/* hover变色 */
 .single-product:hover a::after {
-  background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+  /* background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0; */
 }
 span.tag-line {
 	background: #222222 none repeat scroll 0 0;
@@ -915,7 +930,7 @@ span.tag-line {
 	right: 12px;
 	text-align: center;
 	text-transform: uppercase;
-	top: 12px
+	top: 12px;
 	z-index: 10;
 	padding: 6px 15px;
 	font-weight: 600;
@@ -1322,7 +1337,9 @@ a.read-more {
 /* -------------------------
 8. brand-area
 ---------------------------- */
-.brand-area{}
+.brand-area{
+  padding: 0 0 90px 0;
+}
 .brand-inner-container {
 }
 .single-brand {
@@ -1758,7 +1775,7 @@ h3.sidebar-title::before {
 12. breadcrumb-area
 -------------------------------------*/
 .page-title-area {
-  background: rgba(0, 0, 0, 0) url("img/breadcrumbs.jpg") no-repeat scroll center center / cover ;
+  background: rgba(0, 0, 0, 0) url("img/aiindex/company.jpg") no-repeat scroll center center / cover ;
   padding: 124px 0;
 }
 .title-heading {
@@ -1782,18 +1799,19 @@ h3.sidebar-title::before {
   margin-bottom: 0;
 }
 .breadcrumb-area {
+  background: #efefef;
   border-bottom: 1px solid #e3e3e3;
   position: relative;
 }
 .breadcrumb-list {
 }
-.breadcrumb-list h1 {
+/* .breadcrumb-list h1 {
   color: #fff;
   font-size: 40px;
   font-weight: 700;
   margin-top: 6px;
   text-transform: uppercase;
-}
+} */
 .breadcrumb-list ul{}
 .breadcrumb-list ul li {
   color: #ddd;
@@ -2110,6 +2128,7 @@ ul.single-product-tab li.active a::before {
 }
 .product-share {
   margin-top: 15px;
+  font-size: 20px;
 }
 .product-share label {
   color: #444;
@@ -2880,7 +2899,7 @@ a.shipping-calculator-button:hover {
 }
 .login-title {
   color: #2a2a2a;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
   letter-spacing: 1px;
   margin-bottom: 13px;
@@ -3665,4 +3684,71 @@ a#scrollUp:hover{background:#FE6B8A;}
 }
 .box-wrapper .single-brand {
   border: 0;
+}
+
+
+/*-----------------------------------
+50. register-area
+-------------------------------------*/
+.reg-area {
+	background: #efefef none repeat scroll 0 0;
+	padding: 80px 0;
+}
+.reg-content {
+  /* padding: 25px; */
+}
+.reg-content-img{
+  width: 371px;
+  height: 342px;
+}
+.reg-title {
+  color: #2a2a2a;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 13px;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+.reg-content form {
+  margin-top: 30px;
+}
+.reg-content form label {
+  color: #444;
+  margin-bottom: 5px;
+}
+.reg-content form input {
+  border: 1px solid #e3e3e3;
+  /* box-shadow: none;
+  font-size: 13px;
+  height: 40px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  width: 100%; */
+}
+.reg-content form .reg-sub {
+  font-size: 16px;
+}
+
+/* company */
+.company-title-area{
+  padding: 200px 0;
+}
+.company-vip div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.company-vip div img{
+  width: 30%;
+  float: left;
+}
+.company-img {
+  background-color: #fff;
+  border: 1px solid #ececec;
+}
+.company-img .content {
+  padding-bottom: 30px;
+  padding-top: 30px;
+  text-align: center;
 }
